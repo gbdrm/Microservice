@@ -1,3 +1,12 @@
-<h1>Home</h1>
+<h3>Registered Microservices</h3>
 
-Sample Microservice app
+<div *ngIf="service == null" class="input-group">
+    <input type="text" class="form-control" autofocus [value]="input" />
+    <span class="input-group-btn">
+        <input type="button" (click)="addService()" value="Add Service" class="btn btn-info" />
+    </span>
+</div>
+
+<div *ngIf="service != null">
+    {{service}}
+</div>
